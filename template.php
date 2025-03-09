@@ -42,35 +42,5 @@ get_header('shop');
     <?php endwhile; ?>
 </div>
 
-<style>
-.product {
-    display: flex;
-    gap: 20px;
-    align-items: flex-start;
-}
-.image img {
-    max-width: 300px;
-    height: auto;
-}
-.details {
-    max-width: 400px;
-}
-.product-title {
-    font-size: 24px;
-    font-weight: bold;
-}
-.product-price {
-    font-size: 18px;
-    color: #d00000;
-}
-.product-add-to-cart button {
-    background: black;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-}
-</style>
-
 <?php get_footer('shop'); ?>
 

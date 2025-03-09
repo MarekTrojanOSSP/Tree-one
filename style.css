@@ -104,18 +104,18 @@ Menu
 
  /* Template*/
 
- .product-container {
+ .product{
     display: flex;
     gap: 20px;
     align-items: center;
     padding: 20px;
 }
-.product-image img {
+.image img {
     max-width: 200px;
     border: 1px solid #ddd;
     border-radius: 5px;
 }
-.product-details {
+.details {
     max-width: 400px;
 }
 .product-title {
