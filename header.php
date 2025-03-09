@@ -8,3 +8,21 @@
         </div>
     </div>
 </div>
+
+<nav class="custom-menu">
+    <ul class="menu">
+        <li><a href="<?php echo get_permalink(get_page_by_title('Produk stránka')); ?>">Produk stránka</a></li>
+        <?php
+        wp_nav_menu(array(
+            'theme_location' => 'header-menu',
+            'container' => false,
+            'menu_class' => '',
+            'depth' => 1,
+            'items_wrap' => '%3$s'
+        ));
+        ?>
+    </ul>
+</nav>
+
+
+<?php if (function_exists('custom_breadcrumbs')) custom_breadcrumbs(); ?>

@@ -5,3 +5,231 @@
 Theme Name: My First WordPress Theme
 */
 
+.hero-section {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+}
+
+.hero-title {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.hero-button {
+    padding: 10px 20px;
+    background-color: #0073aa;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.hero-button:hover {
+    background-color: #005177;
+}
+
+/*
+Menu
+*/
+
+.custom-menu {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center; 
+}
+
+.custom-menu .menu {
+    list-style: none;
+    display: flex; 
+    gap: 20px; 
+    padding: 0;
+    margin: 0;
+}
+
+.custom-menu .menu li {
+    display: inline-block;
+}
+
+.custom-menu .menu li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.custom-menu .menu li.current-menu-item a {
+    color: #3075C8; /* Modrá barva aktivní položky */
+}
+
+.custom-menu .menu li a:hover {
+    color: #3075C8;
+}
+
+ /* Template*/
+
+ .product-container {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    padding: 20px;
+}
+.product-image img {
+    max-width: 200px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+.product-details {
+    max-width: 400px;
+}
+.product-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+.product-price {
+    font-size: 20px;
+    color: #333;
+    font-weight: bold;
+}
+.product-availability .status {
+    color: green;
+}
+.add-to-cart {
+    background: black;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+}
+
+/*Normal site*/
+
+two-column-layout {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 20px;
+}
+
+.post-summary {
+    display: flex;
+    flex-direction: row;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.thumbnail {
+    flex: 1;
+    overflow: hidden;
+}
+
+.thumbnail img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 0;
+}
+
+.detail {
+    flex: 2;
+    padding: 20px;
+}
+
+.kategorie {
+    font-size: 0.9em;
+    font-weight: bold;
+    color: gray;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.titulek {
+    font-size: 1.5em;
+    margin: 0 0 10px;
+    color: #333;
+}
+
+.titulek a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s;
+}
+
+.titulek a:hover {
+    color: #8a2be2;
+}
+
+.uryvek {
+    font-size: 1em;
+    color: #555;
+    margin: 10px 0;
+}
+
+.uryvek .read-more {
+    font-size: 0.9em;
+    color: #8a2be2;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+.uryvek .read-more:hover {
+    text-decoration: underline;
+}
+
+.post-meta {
+    font-size: 0.9em;
+    color: #777;
+    margin-top: 15px;
+}
+
+.post-meta span {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.post-meta .post-author {
+    font-weight: bold;
+}

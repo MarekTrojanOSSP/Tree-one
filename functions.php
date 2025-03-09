@@ -1,61 +1,40 @@
-
-
-<style>
-.hero-section {
-    position: relative;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: #fff;
+<?php
+function one_one_enqueue_styles() {
+    wp_enqueue_style(
+        'Tree-one',
+        get_stylesheet_uri('style.css')
+    );
 }
 
-.hero-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
+function register_custom_menu() {
+    register_nav_menu('header-menu', __('Header Menu'));
+}
+add_action('after_setup_theme', 'register_custom_menu');
+
+function custom_breadcrumbs() {
+    // Nastavení
+    $separator = ' > '; // Oddělovač mezi drobky
+    $home = 'Home'; // Text na HOME link
+    $before = '<span class="current">'; // Tag před aktuálním drobkem
+    $after = '</span>'; // Tag za aktuálním drobkem
+
+    if (!is_front_page()) {
+        echo '<nav class="breadcrumbs">';
+        echo '<a href="' . home_url() . '">' . $home . '</a>' . $separator;
+
+        if (is_category() || is_single()) {
+            the_category(' ');
+            if (is_single()) {
+                echo $separator . $before . get_the_title() . $after;
+            }
+        } elseif (is_page()) {
+            echo $before . get_the_title() . $after;
+        } elseif (is_home()) {
+            echo $before . 'Blog' . $after;
+        }
+
+        echo '</nav>';
+    }
 }
 
-.hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-}
-
-.hero-content {
-    position: relative;
-    z-index: 2;
-    padding: 20px;
-}
-
-.hero-title {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-}
-
-.hero-subtitle {
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
-}
-
-.hero-button {
-    padding: 10px 20px;
-    background-color: #0073aa;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 1rem;
-}
-
-.hero-button:hover {
-    background-color: #005177;
-}
-</style>
+?>
