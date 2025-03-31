@@ -11,7 +11,7 @@
 
 <nav class="custom-menu">
     <ul class="menu">
-        <li><a href="<?php echo get_permalink(get_page_by_title('Produk stránka')); ?>">Produk stránka</a></li>
+        <li><a href="<?php echo get_permalink(get_page_by_title('Produk stránka')); ?>">Test stránka</a></li>
         <?php
         wp_nav_menu(array(
             'theme_location' => 'header-menu',
