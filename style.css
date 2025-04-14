@@ -102,42 +102,6 @@ Menu
     color: #3075C8;
 }
 
- /* Template*/
-
- .product{
-    display: flex;
-    gap: 20px;
-    align-items: center;
-    padding: 20px;
-}
-.image img {
-    max-width: 200px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
-.details {
-    max-width: 400px;
-}
-.product-title {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-.product-price {
-    font-size: 20px;
-    color: #333;
-    font-weight: bold;
-}
-.product-availability .status {
-    color: green;
-}
-.add-to-cart {
-    background: black;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    cursor: pointer;
-}
-
 /*Normal site*/
 
 two-column-layout {
@@ -233,3 +197,5 @@ two-column-layout {
 .post-meta .post-author {
     font-weight: bold;
 }
+
+/* Obchod*/ 

@@ -12,7 +12,6 @@ function register_custom_menu() {
 add_action('after_setup_theme', 'register_custom_menu');
 
 function custom_breadcrumbs() {
-    // Nastavení
     $separator = ' > '; // Oddělovač mezi drobky
     $home = 'Home'; // Text na HOME link
     $before = '<span class="current">'; // Tag před aktuálním drobkem
